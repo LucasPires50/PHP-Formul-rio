@@ -35,23 +35,6 @@ $idade = $_POST['idade'];
  * 
  * "is_numeric" - ira validadar se a variavel é um número
  */
-if (empty($nome)) {
-    $_SESSION['menssagem.de.erro'] = 'O campo nome não pode estar vazio';
-    header($string = 'location: index.php');
-    return;
-} else if (strlen($nome) < 3) {
-    $_SESSION['menssagem.de.erro'] = 'O nome deve contar mais de 3 caracteres';
-    header($string = 'location: index.php');
-    return;
-} else if (strlen($nome) > 40) {
-    $_SESSION['menssagem.de.erro'] = 'O nome não pode ter mais de 40 caracteres';
-    header($string = 'location: index.php');
-    return;
-} else if (!is_numeric($idade)) {
-    $_SESSION['menssagem.de.erro'] = 'Informe um número para a idade';
-    header($string = 'location: index.php');
-    return;
-}
 
 if ($idade >= 6 && $idade < 12) {
     for ($i = 0; $i <= count($categorias); $i++) {
